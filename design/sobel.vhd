@@ -8,10 +8,17 @@ use sobel_package.all;
 ----------------------------------------------------------------------------
 entity sobel is
 	port (
+		-- Clock and reset
 		clk : in std_logic;
 		rst : in std_logic; 
 		
-		
+		-- RAM interface
+		we : out std_logic_vector; 
+		address : out std_logic_vector(C_ADDRESS_SIZE-1 downto 0);
+		data : inout std_logic_vector(C_WORD_SIZE-1 downto 0);
+
+		-- Sobel control block interface
+		en : std_logic_vector
 	);
 end entity;
 ----------------------------------------------------------------------------
