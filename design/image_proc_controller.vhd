@@ -3,23 +3,16 @@ library ieee;
 use ieee.std_logic_1164.all;
 use image_proc_package.all;
 ----------------------------------------------------------------------------
-entity sobel is
+entity image_proc_controller is
 	port (
-		-- Clock and reset
 		clk : in std_logic;
 		rst : in std_logic; 
 		
-		-- RAM interface
-		we : out std_logic_vector; 
-		address : out std_logic_vector(C_ADDRESS_SIZE-1 downto 0);
-		data : inout std_logic_vector(C_WORD_SIZE-1 downto 0);
-
-		-- Sobel control block interface
-		en : std_logic_vector
+		
 	);
 end entity;
 ----------------------------------------------------------------------------
-architecture rtl of sobel is
+architecture rtl of sobel_controller is
 begin
 
 end architecture;
